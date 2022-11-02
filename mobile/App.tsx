@@ -4,8 +4,10 @@ import {
   Roboto_700Bold,
   useFonts,
 } from "@expo-google-fonts/roboto";
-import { StatusBar } from "expo-status-bar";
-import { Center, NativeBaseProvider, Text } from "native-base";
+import { NativeBaseProvider } from "native-base";
+import { StatusBar } from "react-native";
+import { Loading } from "./src/components/Loading";
+import { SignIn } from "./src/screens/Signin";
 import { THEME } from "./src/styles/theme";
 
 export default function App() {
@@ -17,12 +19,12 @@ export default function App() {
 
   return (
     <NativeBaseProvider theme={THEME}>
-      <Center flex={1} bgColor="gray.300">
-        <Text color="white" fontSize={24} fontFamily="heading">
-          Hello World!
-        </Text>
-        <StatusBar style="auto" />
-      </Center>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
+      {fontsLoaded ? <SignIn /> : <Loading />}
     </NativeBaseProvider>
   );
 }
