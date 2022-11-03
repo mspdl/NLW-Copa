@@ -38,6 +38,8 @@ model Game {
   date                  DateTime
   firstTeamCountryCode  String
   secondTeamCountryCode String
+
+  guesses Guess[]
 }
 
 model Guess {
@@ -45,4 +47,7 @@ model Guess {
   firstTeamPoints  Int
   secondTeamPoints Int
   createdAt        DateTime @default(now())
+  gameId           String
+
+  game Game @relation(fields: [gameId], references: [id])
 }
