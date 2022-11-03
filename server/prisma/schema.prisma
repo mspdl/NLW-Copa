@@ -22,8 +22,11 @@ model Pool {
 }
 
 model Participant {
-  id      String  @id @default(cuid())
+  id     String  @id @default(cuid())
+  userId String?
+
   guesses Guess[]
+  User    User?   @relation(fields: [userId], references: [id])
 }
 
 model User {
@@ -32,6 +35,8 @@ model User {
   email     String   @unique
   avatarUrl String?
   createdAt DateTime @default(now())
+
+  participant Participant[]
 }
 
 model Game {
