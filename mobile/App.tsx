@@ -7,7 +7,7 @@ import {
 import { NativeBaseProvider } from "native-base";
 import { StatusBar } from "react-native";
 import { Loading } from "./src/components/Loading";
-import { SignIn } from "./src/screens/Signin";
+import { SignIn } from "./src/screens/SignIn";
 import { THEME } from "./src/styles/theme";
 
 export default function App() {
