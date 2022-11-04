@@ -10,7 +10,9 @@ export default function Home() {
       <main>
         <Image src={logoImg} alt="NLW Copa" />
 
-        <h1>Crie seu próprio bolão da copa e compartilhe entre amigos!</h1>
+        <h1 className="mt-14 text-white text-5xl font-bold leading-tight">
+          Crie seu próprio bolão da copa e compartilhe entre amigos!
+        </h1>
 
         <div>
           <Image src={usersAvatarExampleImg} alt="" />
