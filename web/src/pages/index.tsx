@@ -6,7 +6,7 @@ import usersAvatarExampleImg from "../assets/users-avatar-example.png";
 
 export default function Home() {
   return (
-    <div className="max-w-[1124px] h-screen mx-auto grid grid-cols-2 items-center">
+    <div className="max-w-[1124px] h-screen mx-auto grid grid-cols-2 gap-28 items-center">
       <main>
         <Image src={logoImg} alt="NLW Copa" />
 
@@ -37,7 +37,7 @@ export default function Home() {
           </button>
         </form>
 
-        <p>
+        <p className="mt-4 text-sm text-gray-300 leading-relaxed">
           Após criar seu bolão, você receberá um código único que poderá usar
           para convidar outras pessoas.
         </p>
