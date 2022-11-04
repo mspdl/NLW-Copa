@@ -6,7 +6,7 @@ import usersAvatarExampleImg from "../assets/users-avatar-example.png";
 
 export default function Home() {
   return (
-    <div>
+    <div className="max-w-[1124px] h-screen mx-auto grid grid-cols-2 items-center">
       <main>
         <Image src={logoImg} alt="NLW Copa" />
 
