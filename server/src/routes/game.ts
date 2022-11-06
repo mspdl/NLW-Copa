@@ -1,3 +1,3 @@
 import { FastifyInstance } from "fastify";
 
-export function gameRoutes(fastify: FastifyInstance) {}
+export async function gameRoutes(fastify: FastifyInstance) {}

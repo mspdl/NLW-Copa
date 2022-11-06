@@ -1,3 +1,3 @@
 import { FastifyInstance } from "fastify";
 
-export function authRoutes(fastify: FastifyInstance) {}
+export async function authRoutes(fastify: FastifyInstance) {}
