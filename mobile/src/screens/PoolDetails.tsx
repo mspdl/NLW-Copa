@@ -3,6 +3,7 @@ import { HStack, useToast, VStack } from "native-base";
 import { useEffect, useState } from "react";
 import { Share } from "react-native";
 import { EmptyMyPoolList } from "../components/EmptyMyPoolList";
+import { Guesses } from "../components/Guesses";
 import { Header } from "../components/Header";
 import { Loading } from "../components/Loading";
 import { Option } from "../components/Option";
@@ -69,7 +70,7 @@ export function PoolDetails() {
         onShare={handleCodeShare}
       />
 
-      {poolDetails._count?.participants < 0 ? (
+      {poolDetails._count?.participants > 0 ? (
         <VStack px={5} flex={1}>
           <PoolHeader data={poolDetails} />
 
@@ -89,6 +90,8 @@ export function PoolDetails() {
               }}
             ></Option>
           </HStack>
+
+          <Guesses poolId={poolDetails.id} />
         </VStack>
       ) : (
         <EmptyMyPoolList code={poolDetails.code} />
